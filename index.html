@@ -1,265 +1,247 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mumma's Cake & Chocolate Delight</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe6f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff66a3;
-            color: white;
-            padding: 20px;
-            font-size: 28px;
-        }
-        .section {
-            padding: 40px;
-        }
-        .product {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-        }
-        button {
-            background-color: #ff3385;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #ff66a3;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
+<title>Mumma's Cake Delight</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fff7f9, #ffeef5);
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  url('https://images.unsplash.com/photo-1578985545062-69928b1d9587');
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight:700;
+  background: linear-gradient(to right, #d4af37, #f9e076);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section {
+  padding: 80px 20px;
+  text-align:center;
+}
+
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(15px);
+  padding:30px;
+  border-radius:20px;
+  max-width:500px;
+  margin:auto;
+  box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+input, select, textarea {
+  width:90%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+}
+
+button {
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.primary {
+  background:#ff6f91;
+  color:white;
+}
+
+.primary:hover {
+  background:#ff4d73;
+}
+
+.gallery {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
+
+.gallery img {
+  width:100%;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.gallery img:hover {
+  transform:scale(1.05);
+}
+
+.review {
+  max-width:600px;
+  margin:auto;
+  font-style:italic;
+  min-height:80px;
+}
+
+.footer {
+  background:#ff6f91;
+  color:white;
+  padding:40px;
+}
+
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  text-decoration:none;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    Mumma's Cake Delight & Mumma's Chocolate Delight
+<div class="logo">Mumma's Cake Delight</div>
+<p>Luxury Custom Cakes • Pure Veg • Mumbai</p>
+<a href="#order"><button class="primary">Order Now</button></a>
 </header>
 
-<div class="section">
-    <h2>Our Cakes</h2>
+<section>
+<h2>Our Premium Creations</h2>
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1607478900766-efe13248b125">
+<img src="https://images.unsplash.com/photo-1563720223185-11003d516935">
+<img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191">
+<img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d">
+</div>
+</section>
 
-    <div class="product">
-        <h3>Chocolate Cake</h3>
-        <p>₹600</p>
-        <button>Order Now</button>
-    </div>
+<section>
+<h2>Customer Love ❤️</h2>
+<div class="review" id="reviewText">
+"Absolutely delicious and beautiful cake!" – Priya
+</div>
+</section>
 
-    <div class="product">
-        <h3>Red Velvet Cake</h3>
-        <p>₹700</p>
-        <button>Order Now</button>
-    </div>
+<section id="order">
+<h2>Custom Cake Order</h2>
+
+<div class="glass">
+<input type="text" id="name" placeholder="Your Name">
+<input type="tel" id="phone" placeholder="Phone Number">
+
+<select id="flavor">
+<option value="600">Chocolate - ₹600/kg</option>
+<option value="650">Red Velvet - ₹650/kg</option>
+<option value="550">Butterscotch - ₹550/kg</option>
+<option value="500">Pineapple - ₹500/kg</option>
+</select>
+
+<input type="number" id="kg" placeholder="Weight (kg)" oninput="calculateTotal()">
+<p>Total Price: ₹<span id="total">0</span></p>
+
+<input type="date" id="date">
+<textarea id="message" rows="3" placeholder="Message on Cake"></textarea>
+
+<button class="primary" onclick="sendOrder()">Order on WhatsApp</button>
+</div>
+</section>
+
+<section>
+<h2>Instagram Orders</h2>
+<a href="https://instagram.com/mummascakedelight_01" target="_blank">
+<button class="primary">@mummascakedelight_01</button>
+</a>
+</section>
+
+<section>
+<h2>UPI Payment</h2>
+<img src="upi.jpg" width="220">
+<p>UPI ID: jhumasarkar1418-1@okicici</p>
+</section>
+
+<section>
+<h2>Visit Us</h2>
+<iframe src="https://www.google.com/maps?q=Mumbai&output=embed"
+width="90%" height="300" style="border-radius:20px;"></iframe>
+</section>
+
+<div class="footer">
+<p>📞 9082612696</p>
+<p>Made with Love in Mumbai</p>
 </div>
 
-<div class="section">
-    <h2>Our Chocolates</h2>
+<a class="whatsapp" href="https://wa.me/919082612696">💬</a>
 
-    <div class="product">
-        <h3>Milk Chocolate Box</h3>
-        <p>₹350</p>
-        <button>Order Now</button>
-    </div>
-</div>
+<script>
+function calculateTotal(){
+  let price = document.getElementById("flavor").value;
+  let kg = document.getElementById("kg").value;
+  let total = price * kg;
+  document.getElementById("total").innerText = total || 0;
+}
 
-<div class="section">
-    <h2>Contact Us</h2>
-    <p>📞 +91 98765 43210</p>
-    <p>📍 Mumbai</p>
-</div>
+function sendOrder(){
+  let name=document.getElementById("name").value;
+  let phone=document.getElementById("phone").value;
+  let flavor=document.getElementById("flavor").options[document.getElementById("flavor").selectedIndex].text;
+  let kg=document.getElementById("kg").value;
+  let total=document.getElementById("total").innerText;
+  let date=document.getElementById("date").value;
+  let message=document.getElementById("message").value;
 
-<footer>
-    © 2026 Mumma's Delight | Made with Love
-</footer>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Mumma's Cake & Chocolate Delight</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe6f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff66a3;
-            color: white;
-            padding: 20px;
-            font-size: 28px;
-        }
-        .section {
-            padding: 40px;
-        }
-        .product {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-        }
-        button {
-            background-color: #ff3385;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #ff66a3;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
-</head>
-<body>
+  let text="Premium Cake Order:%0AName:"+name+
+  "%0APhone:"+phone+
+  "%0AFlavor:"+flavor+
+  "%0AWeight:"+kg+"kg"+
+  "%0ATotal:₹"+total+
+  "%0ADelivery:"+date+
+  "%0AMessage:"+message;
 
-<header>
-    Mumma's Cake Delight & Mumma's Chocolate Delight
-</header>
+  window.open("https://wa.me/919082612696?text="+text);
+}
 
-<div class="section">
-    <h2>Our Cakes</h2>
+let reviews=[
+"Absolutely delicious and beautiful cake! – Priya",
+"Best custom cake in Mumbai! – Rahul",
+"So premium and tasty 😍 – Sneha"
+];
 
-    <div class="product">
-        <h3>Chocolate Cake</h3>
-        <p>₹600</p>
-        <button>Order Now</button>
-    </div>
+let i=0;
+setInterval(()=>{
+i=(i+1)%reviews.length;
+document.getElementById("reviewText").innerText=reviews[i];
+},3000);
+</script>
 
-    <div class="product">
-        <h3>Red Velvet Cake</h3>
-        <p>₹700</p>
-        <button>Order Now</button>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Our Chocolates</h2>
-
-    <div class="product">
-        <h3>Milk Chocolate Box</h3>
-        <p>₹350</p>
-        <button>Order Now</button>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Contact Us</h2>
-    <p>📞 +91 98765 43210</p>
-    <p>📍 Mumbai</p>
-</div>
-
-<footer>
-    © 2026 Mumma's Delight | Made with Love
-</footer>
-
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-    <title>Mumma's Cake & Chocolate Delight</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffe6f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ff66a3;
-            color: white;
-            padding: 20px;
-            font-size: 28px;
-        }
-        .section {
-            padding: 40px;
-        }
-        .product {
-            background: white;
-            margin: 20px auto;
-            padding: 20px;
-            width: 300px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px gray;
-        }
-        button {
-            background-color: #ff3385;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        footer {
-            background-color: #ff66a3;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    Mumma's Cake Delight & Mumma's Chocolate Delight
-</header>
-
-<div class="section">
-    <h2>Our Cakes</h2>
-
-    <div class="product">
-        <h3>Chocolate Cake</h3>
-        <p>₹600</p>
-        <button>Order Now</button>
-    </div>
-
-    <div class="product">
-        <h3>Red Velvet Cake</h3>
-        <p>₹700</p>
-        <button>Order Now</button>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Our Chocolates</h2>
-
-    <div class="product">
-        <h3>Milk Chocolate Box</h3>
-        <p>₹350</p>
-        <button>Order Now</button>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Contact Us</h2>
-    <p>📞 +91 98765 43210</p>
-    <p>📍 Mumbai</p>
-</div>
-
-<footer>
-    © 2026 Mumma's Delight | Made with Love
-</footer>
-
-</body>
-</html>
 </body>
 </html>
