@@ -4,28 +4,24 @@
 <title>Mumma's Cake Delight</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-html { scroll-behavior: smooth; }
-
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom right, #fff7f9, #ffeef5);
-  color: #333;
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:#fff8f6;
+  color:#333;
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-}
+h1,h2 { font-family:'Playfair Display',serif; }
 
 header {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+  height:90vh;
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
   url('https://images.unsplash.com/photo-1578985545062-69928b1d9587');
-  background-size: cover;
-  background-position: center;
+  background-size:cover;
+  background-position:center;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -34,83 +30,48 @@ header {
   color:white;
 }
 
-.logo {
-  font-size: 50px;
-  font-weight:700;
-  background: linear-gradient(to right, #d4af37, #f9e076);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-section {
-  padding: 80px 20px;
-  text-align:center;
-}
-
-.glass {
-  background: rgba(255,255,255,0.6);
-  backdrop-filter: blur(15px);
-  padding:30px;
-  border-radius:20px;
-  max-width:500px;
-  margin:auto;
-  box-shadow:0 10px 40px rgba(0,0,0,0.1);
-}
-
-input, select, textarea {
-  width:90%;
-  padding:12px;
-  margin:10px 0;
-  border:none;
-  border-radius:10px;
-}
-
-button {
-  padding:12px 25px;
-  border:none;
-  border-radius:30px;
-  cursor:pointer;
-  font-weight:500;
-  transition:0.3s;
-}
-
-.primary {
-  background:#ff6f91;
-  color:white;
-}
-
-.primary:hover {
-  background:#ff4d73;
-}
+section { padding:60px 20px; text-align:center; }
 
 .gallery {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:20px;
-  padding:20px;
 }
 
-.gallery img {
-  width:100%;
-  border-radius:20px;
-  transition:0.4s;
-}
+.gallery img { width:100%; border-radius:12px; }
 
-.gallery img:hover {
-  transform:scale(1.05);
-}
-
-.review {
-  max-width:600px;
+.box {
+  background:white;
+  max-width:550px;
   margin:auto;
-  font-style:italic;
-  min-height:80px;
+  padding:25px;
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.08);
 }
+
+input,select,textarea {
+  width:95%;
+  padding:10px;
+  margin:8px 0;
+  border:1px solid #ddd;
+  border-radius:8px;
+}
+
+button {
+  padding:12px 25px;
+  background:#ff7a8a;
+  color:white;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+button:hover { background:#ff5c72; }
 
 .footer {
-  background:#ff6f91;
+  background:#ff7a8a;
   color:white;
-  padding:40px;
+  padding:25px;
 }
 
 .whatsapp {
@@ -121,8 +82,8 @@ button {
   color:white;
   padding:15px;
   border-radius:50%;
-  font-size:20px;
   text-decoration:none;
+  font-size:18px;
 }
 </style>
 </head>
@@ -130,56 +91,59 @@ button {
 <body>
 
 <header>
-<div class="logo">Mumma's Cake Delight</div>
-<p>Luxury Custom Cakes • Pure Veg • Mumbai</p>
-<a href="#order"><button class="primary">Order Now</button></a>
+<h1>Mumma's Cake Delight</h1>
+<p>Homemade Cakes • Made with Love ❤️ • Mumbai</p>
 </header>
 
 <section>
-<h2>Our Premium Creations</h2>
+<h2>Our Homemade Creations</h2>
 <div class="gallery">
-<img src="https://images.unsplash.com/photo-1607478900766-efe13248b125">
-<img src="https://images.unsplash.com/photo-1563720223185-11003d516935">
-<img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191">
-<img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d">
-</div>
-</section>
-
-<section>
-<h2>Customer Love ❤️</h2>
-<div class="review" id="reviewText">
-"Absolutely delicious and beautiful cake!" – Priya
+<img src="https://images.unsplash.com/photo-1608219953058-2f0a3d75bd7f">
+<img src="https://images.unsplash.com/photo-1599785209707-28f2c5f5c9e9">
+<img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7">
 </div>
 </section>
 
 <section id="order">
-<h2>Custom Cake Order</h2>
+<h2>Place Your Order</h2>
 
-<div class="glass">
+<div class="box">
+
 <input type="text" id="name" placeholder="Your Name">
 <input type="tel" id="phone" placeholder="Phone Number">
 
-<select id="flavor">
-<option value="600">Chocolate - ₹600/kg</option>
-<option value="650">Red Velvet - ₹650/kg</option>
-<option value="550">Butterscotch - ₹550/kg</option>
-<option value="500">Pineapple - ₹500/kg</option>
+<select id="category" onchange="updateOptions()">
+<option value="cake">Cake</option>
+<option value="brownie">Brownie</option>
+<option value="cupcake">Cupcake</option>
 </select>
 
-<input type="number" id="kg" placeholder="Weight (kg)" oninput="calculateTotal()">
-<p>Total Price: ₹<span id="total">0</span></p>
+<select id="flavor"></select>
+<select id="size" onchange="calculateTotal()"></select>
+
+<select id="location" onchange="calculateTotal()">
+<option value="0">Select Delivery Location</option>
+<option value="50">Nearby - ₹50</option>
+<option value="100">Within Mumbai - ₹100</option>
+<option value="150">Long Distance - ₹150</option>
+</select>
+
+<p>Product Price: ₹<span id="productPrice">0</span></p>
+<p>Delivery: ₹<span id="deliveryPrice">0</span></p>
+<h3>Total: ₹<span id="total">0</span></h3>
 
 <input type="date" id="date">
-<textarea id="message" rows="3" placeholder="Message on Cake"></textarea>
+<textarea id="message" placeholder="Message on cake"></textarea>
 
-<button class="primary" onclick="sendOrder()">Order on WhatsApp</button>
+<button onclick="sendOrder()">Order on WhatsApp</button>
+
 </div>
 </section>
 
 <section>
 <h2>Instagram Orders</h2>
 <a href="https://instagram.com/mummascakedelight_01" target="_blank">
-<button class="primary">@mummascakedelight_01</button>
+<button>@mummascakedelight_01</button>
 </a>
 </section>
 
@@ -192,55 +156,130 @@ button {
 <section>
 <h2>Visit Us</h2>
 <iframe src="https://www.google.com/maps?q=Mumbai&output=embed"
-width="90%" height="300" style="border-radius:20px;"></iframe>
+width="90%" height="300" style="border-radius:12px;"></iframe>
 </section>
 
 <div class="footer">
 <p>📞 9082612696</p>
-<p>Made with Love in Mumbai</p>
+<p>Mumma's Cake Delight – Made with Love ❤️</p>
 </div>
 
 <a class="whatsapp" href="https://wa.me/919082612696">💬</a>
 
 <script>
+
+const data = {
+
+cake: {
+"Chocolate Cream Cake": {"250gm":250,"500gm":350,"1kg":700},
+"Vanilla Cake": {"250gm":250,"500gm":350,"1kg":700},
+"Black Forest Cake": {"250gm":300,"500gm":400,"1kg":800},
+"White Forest Cake": {"250gm":300,"500gm":450,"1kg":900},
+"Chocolate Truffle Cake": {"250gm":300,"500gm":550,"1kg":1100},
+"Dutch Truffle Cake": {"250gm":300,"500gm":500,"1kg":1000},
+"White Dutch Truffle Cake": {"250gm":350,"500gm":600,"1kg":1200},
+"Red Velvet Cake": {"250gm":300,"500gm":550,"1kg":1100},
+"Pineapple Cake": {"250gm":300,"500gm":500,"1kg":1000},
+"KitKat Chocolate Cake": {"250gm":300,"500gm":550,"1kg":1100},
+"Oreo Chocolate Cake": {"250gm":300,"500gm":500,"1kg":1000},
+"Ferrero Rocher Cake": {"500gm":700,"1kg":1400},
+"Choco Chip Cake": {"250gm":250,"500gm":400,"1kg":800},
+"Rasmalai Cake": {"500gm":600,"1kg":1100},
+"Strawberry Cake": {"250gm":250,"500gm":400,"1kg":800}
+},
+
+brownie: {
+"Chocolate Brownies":{"6pcs":300,"9pcs":450},
+"Double Chocolate Brownies":{"6pcs":420,"9pcs":630},
+"Chocolate Nuts Brownies":{"6pcs":420,"9pcs":630}
+},
+
+cupcake: {
+"Chocolate Choco Chip Cupcake":{"4pc":200,"6pc":300,"8pc":400,"12pc":600},
+"Vanilla Cupcake":{"4pc":200,"6pc":300,"8pc":400,"12pc":600},
+"Chocolate Truffle Cupcake":{"4pc":240,"6pc":350,"8pc":470,"12pc":700},
+"White Truffle Cupcake":{"4pc":280,"6pc":410,"8pc":550,"12pc":820},
+"Red Velvet Cupcake":{"4pc":240,"6pc":350,"8pc":470,"12pc":700},
+"Pineapple Cupcake":{"4pc":240,"6pc":350,"8pc":470,"12pc":700},
+"KitKat Cupcake":{"4pc":240,"6pc":350,"8pc":470,"12pc":700},
+"Oreo Cupcake":{"4pc":240,"6pc":350,"8pc":470,"12pc":700},
+"Strawberry Cupcake":{"4pc":200,"6pc":300,"8pc":400,"12pc":600}
+}
+
+};
+
+function updateOptions(){
+let category=document.getElementById("category").value;
+let flavorSelect=document.getElementById("flavor");
+let sizeSelect=document.getElementById("size");
+
+flavorSelect.innerHTML="";
+sizeSelect.innerHTML="";
+
+for(let flavor in data[category]){
+let option=document.createElement("option");
+option.text=flavor;
+flavorSelect.add(option);
+}
+
+updateSizes();
+}
+
+function updateSizes(){
+let category=document.getElementById("category").value;
+let flavor=document.getElementById("flavor").value;
+let sizeSelect=document.getElementById("size");
+
+sizeSelect.innerHTML="";
+
+for(let size in data[category][flavor]){
+let option=document.createElement("option");
+option.text=size;
+sizeSelect.add(option);
+}
+
+calculateTotal();
+}
+
+document.getElementById("flavor").addEventListener("change",updateSizes);
+
 function calculateTotal(){
-  let price = document.getElementById("flavor").value;
-  let kg = document.getElementById("kg").value;
-  let total = price * kg;
-  document.getElementById("total").innerText = total || 0;
+let category=document.getElementById("category").value;
+let flavor=document.getElementById("flavor").value;
+let size=document.getElementById("size").value;
+let delivery=parseInt(document.getElementById("location").value);
+
+let price=data[category][flavor][size] || 0;
+
+document.getElementById("productPrice").innerText=price;
+document.getElementById("deliveryPrice").innerText=delivery;
+document.getElementById("total").innerText=price+delivery;
 }
 
 function sendOrder(){
-  let name=document.getElementById("name").value;
-  let phone=document.getElementById("phone").value;
-  let flavor=document.getElementById("flavor").options[document.getElementById("flavor").selectedIndex].text;
-  let kg=document.getElementById("kg").value;
-  let total=document.getElementById("total").innerText;
-  let date=document.getElementById("date").value;
-  let message=document.getElementById("message").value;
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let category=document.getElementById("category").value;
+let flavor=document.getElementById("flavor").value;
+let size=document.getElementById("size").value;
+let total=document.getElementById("total").innerText;
+let date=document.getElementById("date").value;
+let message=document.getElementById("message").value;
 
-  let text="Premium Cake Order:%0AName:"+name+
-  "%0APhone:"+phone+
-  "%0AFlavor:"+flavor+
-  "%0AWeight:"+kg+"kg"+
-  "%0ATotal:₹"+total+
-  "%0ADelivery:"+date+
-  "%0AMessage:"+message;
+let text="New Order:%0AName:"+name+
+"%0APhone:"+phone+
+"%0ACategory:"+category+
+"%0AFlavor:"+flavor+
+"%0ASize:"+size+
+"%0ATotal: ₹"+total+
+"%0ADelivery Date:"+date+
+"%0AMessage:"+message;
 
-  window.open("https://wa.me/919082612696?text="+text);
+window.open("https://wa.me/919082612696?text="+text);
 }
 
-let reviews=[
-"Absolutely delicious and beautiful cake! – Priya",
-"Best custom cake in Mumbai! – Rahul",
-"So premium and tasty 😍 – Sneha"
-];
+updateOptions();
 
-let i=0;
-setInterval(()=>{
-i=(i+1)%reviews.length;
-document.getElementById("reviewText").innerText=reviews[i];
-},3000);
 </script>
 
 </body>
